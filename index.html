@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIKA.ART — Креативный маникюр</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23160B12'/><path d='M22 26 L38 26 L50 62 L62 26 L78 26 L58 78 L42 78 Z' fill='white'/><circle cx='80' cy='74' r='8' fill='%23FF007F'/></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">VIKA<span class="accent">.</span>ART</div>
+
+      <nav class="nav" id="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#pricing">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#contacts" class="btn btn-primary nav-mobile-btn">
+          <span>ЗАПИСАТЬСЯ</span>
+          <svg
+            class="btn-icon"
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M2.5 8h11M9.5 3.5l4.5 4.5-4.5 4.5" />
+          </svg>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contacts" class="btn btn-primary header-btn">
+          <span>ЗАПИСАТЬСЯ</span>
+          <svg
+            class="btn-icon"
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M2.5 8h11M9.5 3.5l4.5 4.5-4.5 4.5" />
+          </svg>
+        </a>
+        <button class="burger" id="burger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-icon">✦</span>
+          <span>КРЕАТИВНЫЙ 3D МАНИКЮР • ВОЛОГДА</span>
+        </div>
+        <h1 class="hero-title">
+          Экстремальная<br />длина <span class="accent">&amp;</span
+          ><br />Креативный<br />дизайн
+        </h1>
+        <p class="hero-desc">
+          Сложные формы, объемный 3D-арт и работа с экстремальной длиной. Жидкий
+          металл, фигурки и авторский стиль под твою индивидуальность.
+        </p>
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn btn-primary">
+            <span>СМОТРЕТЬ ПРАЙС</span>
+            <svg
+              class="btn-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2.5 8h11M9.5 3.5l4.5 4.5-4.5 4.5" />
+            </svg>
+          </a>
+          <a href="#portfolio" class="btn btn-outline">Портфолио</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="hero-nails.jpg" alt="Креативный маникюр" class="hero-image" />
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <img src="vika.jpg" alt="Мастер Вика" class="about-image" />
+        </div>
+        <div class="about-content">
+          <span class="section-subtitle">&mdash; О МАСТЕРЕ</span>
+          <h2 class="section-title about-title">
+            Твой nail-<br />мастер &mdash; Вика
+          </h2>
+          <div class="card text-card">
+            <p>
+              Привет! Я Вика &mdash; бьюти-мастер с профильным образованием
+              косметика-эстетиста. Специализируюсь на креативных дизайнах,
+              объемном 3D-арте и экстремальной длине. Работаю даже со сложными
+              исходниками и создаю уникальный стиль для каждого клиента в
+              Вологде.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="card stat-card">
+              <h3>5+</h3>
+              <p>Лет опыта</p>
+            </div>
+            <div class="card stat-card">
+              <h3 class="stat-dark">1.2k+</h3>
+              <p>Креативных работ</p>
+            </div>
+            <div class="card stat-card">
+              <h3>100%</h3>
+              <p>Стерильность<br />и стиль</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">&mdash; ПРАЙС-ЛИСТ</span>
+        <h2 class="section-title">Услуги и стоимость</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="card price-card">
+          <h3 class="price-title">01 / МАНИКЮР</h3>
+          <div class="price-list">
+            <div class="price-item">
+              <span>Классический маникюр</span><span>1100₽</span>
+            </div>
+            <div class="price-item">
+              <span>Укрепление (S)</span><span>1900₽</span>
+            </div>
+            <div class="price-item">
+              <span>Укрепление (M)</span><span>2200₽</span>
+            </div>
+            <div class="price-item">
+              <span>Укрепление (L / XL)</span><span>2400₽ - 2600₽</span>
+            </div>
+            <div class="price-item">
+              <span>Наращивание (S / M)</span><span>2000₽ - 2200₽</span>
+            </div>
+            <div class="price-item">
+              <span>Наращивание (L / XL)</span><span>2400₽ - 2600₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="card price-card">
+          <h3 class="price-title">02 / ДИЗАЙН И ДОПЫ</h3>
+          <div class="price-list">
+            <div class="price-item">
+              <span>Френч / Легкий дизайн</span><span>200₽</span>
+            </div>
+            <div class="price-item">
+              <span>Объемные фигурки</span><span>300₽</span>
+            </div>
+            <div class="price-item">
+              <span>Сложный 3D-дизайн</span><span>400₽</span>
+            </div>
+            <div class="price-item">
+              <span>Снятие покрытия</span><span>500₽</span>
+            </div>
+            <div class="price-item">
+              <span>Инкрустация стразами</span><span>500₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="card price-card">
+          <h3 class="price-title">03 / ПЕДИКЮР</h3>
+          <div class="price-list">
+            <div class="price-item">
+              <span>Экспресс-обработка</span><span>1200₽</span>
+            </div>
+            <div class="price-item">
+              <span>SMART без покрытия</span><span>1600₽</span>
+            </div>
+            <div class="price-item">
+              <span>Педикюр с гель-лаком</span><span>1800₽</span>
+            </div>
+            <div class="price-item">
+              <span>SMART с покрытием</span><span>2000₽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">&mdash; МОИ РАБОТЫ</span>
+        <h2 class="section-title">Галерея дизайна</h2>
+      </div>
+      <div class="portfolio-grid">
+        <img src="port1.jpg" alt="Маникюр 1" class="port-img wide" />
+        <img src="port2.jpg" alt="Маникюр 2" class="port-img narrow" />
+        <img src="port3.jpg" alt="Педикюр" class="port-img narrow" />
+        <img src="port4.jpg" alt="Маникюр 3" class="port-img wide" />
+      </div>
+    </section>
+
+    <section id="contacts" class="section">
+      <div class="section-header text-center">
+        <span class="section-subtitle">&mdash; СВЯЗАТЬСЯ СО МНОЙ</span>
+        <h2 class="section-title">Создадим твой стиль &mdash; Записаться</h2>
+      </div>
+      <div class="contacts-grid">
+        <a
+          href="https://instagram.com/vnorkk.beauty"
+          target="_blank"
+          class="card contact-card"
+        >
+          <div class="contact-top">
+            <div class="contact-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div class="contact-arrow">&#x2197;</div>
+          </div>
+          <div class="contact-text">
+            <span class="contact-label">INSTAGRAM DM</span>
+            <span class="contact-value">@vnorkk.beauty</span>
+          </div>
+        </a>
+        <a href="https://t.me/vnorkk" target="_blank" class="card contact-card">
+          <div class="contact-top">
+            <div class="contact-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </div>
+            <div class="contact-arrow">&#x2197;</div>
+          </div>
+          <div class="contact-text">
+            <span class="contact-label">TELEGRAM DIRECT</span>
+            <span class="contact-value">@vnorkk</span>
+          </div>
+        </a>
+        <a href="tel:+79110485240" class="card contact-card">
+          <div class="contact-top">
+            <div class="contact-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+            </div>
+            <div class="contact-arrow">&#x2197;</div>
+          </div>
+          <div class="contact-text">
+            <span class="contact-label">ТЕЛЕФОН / WHATSAPP</span>
+            <span class="contact-value">+7 911 048-52-40</span>
+          </div>
+        </a>
+        <a href="mailto:vnorkk@mail.ru" class="card contact-card">
+          <div class="contact-top">
+            <div class="contact-icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-arrow">&#x2197;</div>
+          </div>
+          <div class="contact-text">
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-value">vnorkk@mail.ru</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="footer-line"></div>
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="logo">VIKA<span class="accent">.</span>ART</div>
+        <p>Вологда, ул. Ярославская, 31Б (Бывалово)</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/vnorkk.beauty" target="_blank"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
+        ></a>
+        <a href="https://t.me/vnorkk" target="_blank"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg
+        ></a>
+        <a href="tel:+79110485240"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path></svg
+        ></a>
+        <a href="mailto:vnorkk@mail.ru"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+            <polyline points="22,6 12,13 2,6"></polyline></svg
+        ></a>
+      </div>
+      <div class="footer-right">&copy; 2026 Vika. Все права защищены.</div>
+    </footer>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav");
+      const navLinks = document.querySelectorAll(".nav a");
+      const header = document.querySelector(".header");
+
+      // Открытие / закрытие бургер-меню
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        nav.classList.toggle("active");
+        document.body.classList.toggle("no-scroll");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          burger.classList.remove("active");
+          nav.classList.remove("active");
+          document.body.classList.remove("no-scroll");
+        });
+      });
+
+      // Умная шапка: скрывается при скролле вниз, мгновенно появляется при движении вверх
+      let lastScrollTop = 0;
+      window.addEventListener(
+        "scroll",
+        () => {
+          const currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          // Если открыто мобильное меню — не прячем шапку
+          if (nav.classList.contains("active")) return;
+
+          if (currentScroll <= 60) {
+            header.classList.remove("header--hidden");
+            return;
+          }
+
+          if (
+            currentScroll > lastScrollTop &&
+            !header.classList.contains("header--hidden")
+          ) {
+            // Скролл вниз — мягко прячем
+            header.classList.add("header--hidden");
+          } else if (
+            currentScroll < lastScrollTop &&
+            header.classList.contains("header--hidden")
+          ) {
+            // Чуть повели вверх — моментально показываем
+            header.classList.remove("header--hidden");
+          }
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
