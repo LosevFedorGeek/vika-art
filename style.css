@@ -15,15 +15,17 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--bg-color);
   font-family: var(--font-body);
   color: var(--text-main);
-  overflow-x: clip;
 }
 
 body.no-scroll {
@@ -36,7 +38,6 @@ body.no-scroll {
   margin: 0 auto;
   padding-left: 32px;
   padding-right: 32px;
-  scroll-margin-top: 75px;
 }
 
 .text-center {
@@ -51,10 +52,11 @@ body.no-scroll {
   justify-content: space-between;
   align-items: center;
   padding: 18px 48px;
-  background-color: rgba(255, 245, 248, 0.92);
+  background-color: rgba(255, 245, 248, 0.94);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 0, 127, 0.1);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
 
@@ -341,10 +343,6 @@ body.no-scroll {
   font-size: 15px;
 }
 
-.text-card p + p {
-  margin-top: 18px;
-}
-
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -558,10 +556,6 @@ body.no-scroll {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   АДАПТИВНОСТЬ ПОД ЭКРАНЫ
-   ========================================================================== */
-
 @media (max-width: 1200px) {
   :root {
     --section-padding: 70px 0;
@@ -569,7 +563,6 @@ body.no-scroll {
   .section {
     padding-left: 24px;
     padding-right: 24px;
-    scroll-margin-top: 70px;
   }
   .header {
     padding: 16px 28px;
@@ -601,9 +594,6 @@ body.no-scroll {
   :root {
     --section-padding: 60px 0;
   }
-  .section {
-    scroll-margin-top: 65px;
-  }
   .header {
     padding: 16px 24px;
   }
@@ -626,6 +616,7 @@ body.no-scroll {
     padding: 12px 0;
   }
   .contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
   .contact-card {
@@ -664,17 +655,11 @@ body.no-scroll {
   .pricing-grid .price-card:last-child {
     grid-column: span 2;
   }
-  .contacts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
   :root {
     --section-padding: 40px 0;
-  }
-  .section {
-    scroll-margin-top: 60px;
   }
   .header {
     padding: 14px 20px;
@@ -688,20 +673,32 @@ body.no-scroll {
   .nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     background-color: rgba(255, 245, 248, 0.98);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 28px;
-    transition: right 0.35s ease;
     z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-16px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s;
   }
   .nav.active {
-    right: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
   }
   .nav a {
     font-size: 20px;
@@ -796,7 +793,6 @@ body.no-scroll {
   .section {
     padding-left: 16px;
     padding-right: 16px;
-    scroll-margin-top: 55px;
   }
   .section-header {
     margin-bottom: 20px;
@@ -854,10 +850,6 @@ body.no-scroll {
     padding: 20px 16px;
     border-radius: 20px;
   }
-  .text-card {
-    padding: 20px 16px;
-    margin-bottom: 16px;
-  }
   .price-card {
     padding: 20px 16px;
   }
@@ -877,7 +869,6 @@ body.no-scroll {
   .section {
     padding-left: 12px;
     padding-right: 12px;
-    scroll-margin-top: 50px;
   }
   .section-header {
     margin-bottom: 16px;

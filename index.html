@@ -415,57 +415,76 @@
     <script>
       const burger = document.getElementById("burger");
       const nav = document.getElementById("nav");
-      const navLinks = document.querySelectorAll(".nav a");
       const header = document.querySelector(".header");
 
-      // Открытие / закрытие бургер-меню
       burger.addEventListener("click", () => {
         burger.classList.toggle("active");
         nav.classList.toggle("active");
         document.body.classList.toggle("no-scroll");
       });
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          burger.classList.remove("active");
-          nav.classList.remove("active");
-          document.body.classList.remove("no-scroll");
-        });
-      });
+      let lastScrollY = window.pageYOffset;
+      let isTicking = false;
 
-      // Умная шапка: скрывается при скролле вниз, мгновенно появляется при движении вверх
-      let lastScrollTop = 0;
       window.addEventListener(
         "scroll",
         () => {
-          const currentScroll =
-            window.pageYOffset || document.documentElement.scrollTop;
+          if (!isTicking) {
+            window.requestAnimationFrame(() => {
+              const currentScrollY = window.pageYOffset;
 
-          // Если открыто мобильное меню — не прячем шапку
-          if (nav.classList.contains("active")) return;
+              if (nav.classList.contains("active")) {
+                header.classList.remove("header--hidden");
+                isTicking = false;
+                return;
+              }
 
-          if (currentScroll <= 60) {
-            header.classList.remove("header--hidden");
-            return;
+              if (currentScrollY <= 60) {
+                header.classList.remove("header--hidden");
+              } else if (currentScrollY > lastScrollY + 6) {
+                header.classList.add("header--hidden");
+              } else if (currentScrollY < lastScrollY - 6) {
+                header.classList.remove("header--hidden");
+              }
+
+              lastScrollY = Math.max(0, currentScrollY);
+              isTicking = false;
+            });
+            isTicking = true;
           }
-
-          if (
-            currentScroll > lastScrollTop &&
-            !header.classList.contains("header--hidden")
-          ) {
-            // Скролл вниз — мягко прячем
-            header.classList.add("header--hidden");
-          } else if (
-            currentScroll < lastScrollTop &&
-            header.classList.contains("header--hidden")
-          ) {
-            // Чуть повели вверх — моментально показываем
-            header.classList.remove("header--hidden");
-          }
-          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         },
         { passive: true },
       );
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (!targetId || targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (!targetElement) return;
+
+          e.preventDefault();
+
+          if (nav.classList.contains("active")) {
+            burger.classList.remove("active");
+            nav.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+          }
+
+          header.classList.remove("header--hidden");
+
+          const headerHeight = header.offsetHeight;
+          const elementTop =
+            targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const scrollTarget = elementTop - headerHeight;
+
+          window.scrollTo({
+            top: Math.max(0, scrollTarget),
+            behavior: "smooth",
+          });
+        });
+      });
     </script>
   </body>
 </html>
