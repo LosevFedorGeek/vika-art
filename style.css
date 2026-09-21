@@ -32,6 +32,20 @@ body.no-scroll {
   overflow: hidden;
 }
 
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .section {
   padding: var(--section-padding);
   max-width: 1280px;
@@ -196,6 +210,10 @@ body.no-scroll {
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(255, 0, 127, 0.05);
   padding: 32px;
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease;
 }
 
 .section-header {
@@ -291,6 +309,9 @@ body.no-scroll {
   border-radius: 32px;
   overflow: hidden;
   box-shadow: 0 0 60px rgba(255, 0, 127, 0.16);
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-image {
@@ -315,6 +336,7 @@ body.no-scroll {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-image {
@@ -430,6 +452,13 @@ body.no-scroll {
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   display: block;
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+}
+
+.port-img:hover {
+  box-shadow: 0 16px 36px rgba(255, 0, 127, 0.15);
 }
 
 .port-img.wide {
